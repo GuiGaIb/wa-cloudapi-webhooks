@@ -1,0 +1,40 @@
+{
+  "name": "wa-cloudapi-webhooks",
+  "version": "0.0.1",
+  "description": "Meta WhatsApp Cloud API Webhooks utilities for Node.js",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuiGaIb/wa-cloudapi-webhooks.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "meta",
+    "webhooks",
+    "node",
+    "typescript",
+    "zod"
+  ],
+  "author": "GuiGaIb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GuiGaIb/wa-cloudapi-webhooks/issues"
+  },
+  "homepage": "https://github.com/GuiGaIb/wa-cloudapi-webhooks#readme",
+  "type": "module",
+  "engines": {
+    "node": ">=20.15",
+    "npm": ">=10.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}

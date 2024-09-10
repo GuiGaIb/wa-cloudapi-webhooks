@@ -31,10 +31,12 @@
     "npm": ">=10.7"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "^22.5.4",
     "typescript": "^5.6.2"
   },
   "dependencies": {
+    "express": "^4.20.0",
     "zod": "^3.23.8"
   }
 }

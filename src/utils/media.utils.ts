@@ -19,11 +19,19 @@ export const downloadMedia = (downloadUrl: string) =>
     },
   });
 
-export const downloadMediaByMediaId = async (mediaId: string) => {
-  const response = await retrieveMediaUrl(mediaId);
-  const downloadUrl = response.data.url;
-  const downloadResponse = await downloadMedia(downloadUrl);
-  return downloadResponse;
+export const downloadMediaById = async (mediaId: string) => {
+  return retrieveMediaUrl(mediaId)
+    .then(({ data }) => data)
+    .then(async (data) => {
+      const downloadResponse = await downloadMedia(data.url);
+      const downloadMimeType = downloadResponse.headers['content-type'];
+      if (downloadMimeType !== data.mime_type) {
+        throw new Error(
+          `Downloaded media content type mismatch. Expected: "${data.mime_type}", got: "${downloadMimeType}"`
+        );
+      }
+      return { ...data, data: downloadResponse.data };
+    });
 };
 
 export type RetrieveMediaResponseData = {

@@ -1,6 +1,11 @@
 import { z } from 'zod';
 
 export const SUPPORTD_MESSAGE_TYPES = ['audio', 'image', 'text'] as const;
+export const SUPPORTED_MIME_TYPES = {
+  audio: ['audio/aac', 'audio/amr', 'audio/mpeg', 'audio/mp4', 'audio/ogg'],
+  image: ['image/jpeg', 'image/png'],
+  text: [],
+} as const;
 
 export const messageErrorSchema = z.object({
   code: z.number().int(),
@@ -30,7 +35,7 @@ export const audioMessageSchema = baseMessageSchema.merge(
     type: z.literal('audio'),
     audio: z.object({
       id: z.string().trim(),
-      mime_type: z.string().trim(),
+      mime_type: z.enum(SUPPORTED_MIME_TYPES.audio),
     }),
     // context: z.object({}),
   })
@@ -50,7 +55,7 @@ export const imageMessageSchema = baseMessageSchema.merge(
     type: z.literal('image'),
     image: z.object({
       id: z.string().trim(),
-      mime_type: z.string().trim(),
+      mime_type: z.enum(SUPPORTED_MIME_TYPES.image),
       caption: z.string().trim().optional(),
       sha256: z.string().trim(),
     }),

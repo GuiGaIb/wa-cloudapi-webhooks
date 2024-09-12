@@ -120,18 +120,18 @@ export declare const audioMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
     type: z.ZodLiteral<"audio">;
     audio: z.ZodObject<{
         id: z.ZodString;
-        mime_type: z.ZodEnum<["audio/aac", "audio/amr", "audio/mpeg", "audio/mp4", "audio/ogg"]>;
+        mime_type: z.ZodEffects<z.ZodString, any, string>;
     }, "strip", z.ZodTypeAny, {
         id: string;
-        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+        mime_type?: any;
     }, {
         id: string;
-        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+        mime_type: string;
     }>;
 }>, "strip", z.ZodTypeAny, {
     audio: {
         id: string;
-        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+        mime_type?: any;
     };
     type: "audio";
     errors: {
@@ -148,7 +148,7 @@ export declare const audioMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
 }, {
     audio: {
         id: string;
-        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+        mime_type: string;
     };
     type: "audio";
     from: string;
@@ -356,18 +356,18 @@ export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject
     type: z.ZodLiteral<"audio">;
     audio: z.ZodObject<{
         id: z.ZodString;
-        mime_type: z.ZodEnum<["audio/aac", "audio/amr", "audio/mpeg", "audio/mp4", "audio/ogg"]>;
+        mime_type: z.ZodEffects<z.ZodString, any, string>;
     }, "strip", z.ZodTypeAny, {
         id: string;
-        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+        mime_type?: any;
     }, {
         id: string;
-        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+        mime_type: string;
     }>;
 }>, "strip", z.ZodTypeAny, {
     audio: {
         id: string;
-        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+        mime_type?: any;
     };
     type: "audio";
     errors: {
@@ -384,7 +384,7 @@ export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject
 }, {
     audio: {
         id: string;
-        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+        mime_type: string;
     };
     type: "audio";
     from: string;

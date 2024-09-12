@@ -35,7 +35,20 @@ export const audioMessageSchema = baseMessageSchema.merge(
     type: z.literal('audio'),
     audio: z.object({
       id: z.string().trim(),
-      mime_type: z.enum(SUPPORTED_MIME_TYPES.audio),
+      mime_type: z
+        .string()
+        .trim()
+        // @ts-ignore - ignore readonly string assertion
+        .refine(
+          (str) =>
+            SUPPORTED_MIME_TYPES.audio.some((type) =>
+              new RegExp(type).test(str)
+            ),
+          (str) =>
+            `mime_type must be one of ${SUPPORTED_MIME_TYPES.audio.join(
+              ', '
+            )}. Received: "${str}"`
+        ),
     }),
     // context: z.object({}),
   })

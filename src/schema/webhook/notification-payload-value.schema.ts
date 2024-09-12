@@ -25,9 +25,9 @@ export const valueMetadataSchema = z.object({
 });
 
 export const valueSchema = z.object({
-  contacts: z.array(valueContactSchema),
-  errors: z.array(valueErrorSchema),
-  messages: z.array(messageSchema),
+  contacts: z.array(valueContactSchema).default([]),
+  errors: z.array(valueErrorSchema).default([]),
+  messages: z.array(messageSchema).default([]),
   metadata: valueMetadataSchema,
   // statuses: z.array(),
 });

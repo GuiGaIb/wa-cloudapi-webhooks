@@ -59,7 +59,7 @@ export declare const valueMetadataSchema: z.ZodObject<{
     phone_number_id: string;
 }>;
 export declare const valueSchema: z.ZodObject<{
-    contacts: z.ZodArray<z.ZodObject<{
+    contacts: z.ZodDefault<z.ZodArray<z.ZodObject<{
         wa_id: z.ZodString;
         user_id: z.ZodString;
         profile: z.ZodObject<{
@@ -81,8 +81,8 @@ export declare const valueSchema: z.ZodObject<{
         profile: {
             name: string;
         };
-    }>, "many">;
-    errors: z.ZodArray<z.ZodObject<{
+    }>, "many">>;
+    errors: z.ZodDefault<z.ZodArray<z.ZodObject<{
         code: z.ZodNumber;
         title: z.ZodString;
         message: z.ZodString;
@@ -107,9 +107,9 @@ export declare const valueSchema: z.ZodObject<{
         error_data: {
             details: string;
         };
-    }>, "many">;
-    messages: z.ZodArray<z.ZodDiscriminatedUnion<"type", [z.ZodObject<z.objectUtil.extendShape<{
-        errors: z.ZodArray<z.ZodObject<{
+    }>, "many">>;
+    messages: z.ZodDefault<z.ZodArray<z.ZodDiscriminatedUnion<"type", [z.ZodObject<z.objectUtil.extendShape<{
+        errors: z.ZodDefault<z.ZodArray<z.ZodObject<{
             code: z.ZodNumber;
             title: z.ZodString;
             message: z.ZodString;
@@ -134,7 +134,7 @@ export declare const valueSchema: z.ZodObject<{
             error_data: {
                 details: string;
             };
-        }>, "many">;
+        }>, "many">>;
         from: z.ZodString;
         id: z.ZodString;
         timestamp: z.ZodEffects<z.ZodEffects<z.ZodString, string, string>, Date, string>;
@@ -173,19 +173,19 @@ export declare const valueSchema: z.ZodObject<{
             mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
         };
         type: "audio";
-        errors: {
+        from: string;
+        id: string;
+        timestamp: string;
+        errors?: {
             code: number;
             title: string;
             message: string;
             error_data: {
                 details: string;
             };
-        }[];
-        from: string;
-        id: string;
-        timestamp: string;
+        }[] | undefined;
     }>, z.ZodObject<z.objectUtil.extendShape<{
-        errors: z.ZodArray<z.ZodObject<{
+        errors: z.ZodDefault<z.ZodArray<z.ZodObject<{
             code: z.ZodNumber;
             title: z.ZodString;
             message: z.ZodString;
@@ -210,7 +210,7 @@ export declare const valueSchema: z.ZodObject<{
             error_data: {
                 details: string;
             };
-        }>, "many">;
+        }>, "many">>;
         from: z.ZodString;
         id: z.ZodString;
         timestamp: z.ZodEffects<z.ZodEffects<z.ZodString, string, string>, Date, string>;
@@ -222,21 +222,21 @@ export declare const valueSchema: z.ZodObject<{
             caption: z.ZodOptional<z.ZodString>;
             sha256: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
+            sha256: string;
             caption?: string | undefined;
         }, {
-            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
+            sha256: string;
             caption?: string | undefined;
         }>;
     }>, "strip", z.ZodTypeAny, {
         image: {
-            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
+            sha256: string;
             caption?: string | undefined;
         };
         type: "image";
@@ -253,25 +253,25 @@ export declare const valueSchema: z.ZodObject<{
         timestamp: Date;
     }, {
         image: {
-            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
+            sha256: string;
             caption?: string | undefined;
         };
         type: "image";
-        errors: {
+        from: string;
+        id: string;
+        timestamp: string;
+        errors?: {
             code: number;
             title: string;
             message: string;
             error_data: {
                 details: string;
             };
-        }[];
-        from: string;
-        id: string;
-        timestamp: string;
+        }[] | undefined;
     }>, z.ZodObject<z.objectUtil.extendShape<{
-        errors: z.ZodArray<z.ZodObject<{
+        errors: z.ZodDefault<z.ZodArray<z.ZodObject<{
             code: z.ZodNumber;
             title: z.ZodString;
             message: z.ZodString;
@@ -296,7 +296,7 @@ export declare const valueSchema: z.ZodObject<{
             error_data: {
                 details: string;
             };
-        }>, "many">;
+        }>, "many">>;
         from: z.ZodString;
         id: z.ZodString;
         timestamp: z.ZodEffects<z.ZodEffects<z.ZodString, string, string>, Date, string>;
@@ -330,18 +330,18 @@ export declare const valueSchema: z.ZodObject<{
             body: string;
         };
         type: "text";
-        errors: {
+        from: string;
+        id: string;
+        timestamp: string;
+        errors?: {
             code: number;
             title: string;
             message: string;
             error_data: {
                 details: string;
             };
-        }[];
-        from: string;
-        id: string;
-        timestamp: string;
-    }>]>, "many">;
+        }[] | undefined;
+    }>]>, "many">>;
     metadata: z.ZodObject<{
         display_phone_number: z.ZodString;
         phone_number_id: z.ZodString;
@@ -403,9 +403,9 @@ export declare const valueSchema: z.ZodObject<{
         timestamp: Date;
     } | {
         image: {
-            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
+            sha256: string;
             caption?: string | undefined;
         };
         type: "image";
@@ -426,78 +426,78 @@ export declare const valueSchema: z.ZodObject<{
         phone_number_id: string;
     };
 }, {
-    errors: {
+    metadata: {
+        display_phone_number: string;
+        phone_number_id: string;
+    };
+    errors?: {
         code: number;
         title: string;
         message: string;
         error_data: {
             details: string;
         };
-    }[];
-    contacts: {
+    }[] | undefined;
+    contacts?: {
         wa_id: string;
         user_id: string;
         profile: {
             name: string;
         };
-    }[];
-    messages: ({
+    }[] | undefined;
+    messages?: ({
         audio: {
             id: string;
             mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
         };
         type: "audio";
-        errors: {
+        from: string;
+        id: string;
+        timestamp: string;
+        errors?: {
             code: number;
             title: string;
             message: string;
             error_data: {
                 details: string;
             };
-        }[];
-        from: string;
-        id: string;
-        timestamp: string;
+        }[] | undefined;
     } | {
         text: {
             body: string;
         };
         type: "text";
-        errors: {
+        from: string;
+        id: string;
+        timestamp: string;
+        errors?: {
             code: number;
             title: string;
             message: string;
             error_data: {
                 details: string;
             };
-        }[];
-        from: string;
-        id: string;
-        timestamp: string;
+        }[] | undefined;
     } | {
         image: {
-            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
+            sha256: string;
             caption?: string | undefined;
         };
         type: "image";
-        errors: {
+        from: string;
+        id: string;
+        timestamp: string;
+        errors?: {
             code: number;
             title: string;
             message: string;
             error_data: {
                 details: string;
             };
-        }[];
-        from: string;
-        id: string;
-        timestamp: string;
-    })[];
-    metadata: {
-        display_phone_number: string;
-        phone_number_id: string;
-    };
+        }[] | undefined;
+    })[] | undefined;
 }>;
 export type ChangeValue = z.infer<typeof valueSchema>;
 export type ValueContact = z.infer<typeof valueContactSchema>;

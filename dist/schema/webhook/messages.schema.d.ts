@@ -32,7 +32,7 @@ export declare const messageErrorSchema: z.ZodObject<{
     };
 }>;
 export declare const baseMessageSchema: z.ZodObject<{
-    errors: z.ZodArray<z.ZodObject<{
+    errors: z.ZodDefault<z.ZodArray<z.ZodObject<{
         code: z.ZodNumber;
         title: z.ZodString;
         message: z.ZodString;
@@ -57,7 +57,7 @@ export declare const baseMessageSchema: z.ZodObject<{
         error_data: {
             details: string;
         };
-    }>, "many">;
+    }>, "many">>;
     from: z.ZodString;
     id: z.ZodString;
     timestamp: z.ZodEffects<z.ZodEffects<z.ZodString, string, string>, Date, string>;
@@ -74,20 +74,20 @@ export declare const baseMessageSchema: z.ZodObject<{
     id: string;
     timestamp: Date;
 }, {
-    errors: {
+    from: string;
+    id: string;
+    timestamp: string;
+    errors?: {
         code: number;
         title: string;
         message: string;
         error_data: {
             details: string;
         };
-    }[];
-    from: string;
-    id: string;
-    timestamp: string;
+    }[] | undefined;
 }>;
 export declare const audioMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
-    errors: z.ZodArray<z.ZodObject<{
+    errors: z.ZodDefault<z.ZodArray<z.ZodObject<{
         code: z.ZodNumber;
         title: z.ZodString;
         message: z.ZodString;
@@ -112,7 +112,7 @@ export declare const audioMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
         error_data: {
             details: string;
         };
-    }>, "many">;
+    }>, "many">>;
     from: z.ZodString;
     id: z.ZodString;
     timestamp: z.ZodEffects<z.ZodEffects<z.ZodString, string, string>, Date, string>;
@@ -151,20 +151,20 @@ export declare const audioMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
     };
     type: "audio";
-    errors: {
+    from: string;
+    id: string;
+    timestamp: string;
+    errors?: {
         code: number;
         title: string;
         message: string;
         error_data: {
             details: string;
         };
-    }[];
-    from: string;
-    id: string;
-    timestamp: string;
+    }[] | undefined;
 }>;
 export declare const textMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
-    errors: z.ZodArray<z.ZodObject<{
+    errors: z.ZodDefault<z.ZodArray<z.ZodObject<{
         code: z.ZodNumber;
         title: z.ZodString;
         message: z.ZodString;
@@ -189,7 +189,7 @@ export declare const textMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
         error_data: {
             details: string;
         };
-    }>, "many">;
+    }>, "many">>;
     from: z.ZodString;
     id: z.ZodString;
     timestamp: z.ZodEffects<z.ZodEffects<z.ZodString, string, string>, Date, string>;
@@ -223,20 +223,20 @@ export declare const textMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
         body: string;
     };
     type: "text";
-    errors: {
+    from: string;
+    id: string;
+    timestamp: string;
+    errors?: {
         code: number;
         title: string;
         message: string;
         error_data: {
             details: string;
         };
-    }[];
-    from: string;
-    id: string;
-    timestamp: string;
+    }[] | undefined;
 }>;
 export declare const imageMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
-    errors: z.ZodArray<z.ZodObject<{
+    errors: z.ZodDefault<z.ZodArray<z.ZodObject<{
         code: z.ZodNumber;
         title: z.ZodString;
         message: z.ZodString;
@@ -261,7 +261,7 @@ export declare const imageMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
         error_data: {
             details: string;
         };
-    }>, "many">;
+    }>, "many">>;
     from: z.ZodString;
     id: z.ZodString;
     timestamp: z.ZodEffects<z.ZodEffects<z.ZodString, string, string>, Date, string>;
@@ -273,21 +273,21 @@ export declare const imageMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
         caption: z.ZodOptional<z.ZodString>;
         sha256: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
+        sha256: string;
         caption?: string | undefined;
     }, {
-        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
+        sha256: string;
         caption?: string | undefined;
     }>;
 }>, "strip", z.ZodTypeAny, {
     image: {
-        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
+        sha256: string;
         caption?: string | undefined;
     };
     type: "image";
@@ -304,26 +304,26 @@ export declare const imageMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
     timestamp: Date;
 }, {
     image: {
-        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
+        sha256: string;
         caption?: string | undefined;
     };
     type: "image";
-    errors: {
+    from: string;
+    id: string;
+    timestamp: string;
+    errors?: {
         code: number;
         title: string;
         message: string;
         error_data: {
             details: string;
         };
-    }[];
-    from: string;
-    id: string;
-    timestamp: string;
+    }[] | undefined;
 }>;
 export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject<z.objectUtil.extendShape<{
-    errors: z.ZodArray<z.ZodObject<{
+    errors: z.ZodDefault<z.ZodArray<z.ZodObject<{
         code: z.ZodNumber;
         title: z.ZodString;
         message: z.ZodString;
@@ -348,7 +348,7 @@ export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject
         error_data: {
             details: string;
         };
-    }>, "many">;
+    }>, "many">>;
     from: z.ZodString;
     id: z.ZodString;
     timestamp: z.ZodEffects<z.ZodEffects<z.ZodString, string, string>, Date, string>;
@@ -387,19 +387,19 @@ export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject
         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
     };
     type: "audio";
-    errors: {
+    from: string;
+    id: string;
+    timestamp: string;
+    errors?: {
         code: number;
         title: string;
         message: string;
         error_data: {
             details: string;
         };
-    }[];
-    from: string;
-    id: string;
-    timestamp: string;
+    }[] | undefined;
 }>, z.ZodObject<z.objectUtil.extendShape<{
-    errors: z.ZodArray<z.ZodObject<{
+    errors: z.ZodDefault<z.ZodArray<z.ZodObject<{
         code: z.ZodNumber;
         title: z.ZodString;
         message: z.ZodString;
@@ -424,7 +424,7 @@ export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject
         error_data: {
             details: string;
         };
-    }>, "many">;
+    }>, "many">>;
     from: z.ZodString;
     id: z.ZodString;
     timestamp: z.ZodEffects<z.ZodEffects<z.ZodString, string, string>, Date, string>;
@@ -436,21 +436,21 @@ export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject
         caption: z.ZodOptional<z.ZodString>;
         sha256: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
+        sha256: string;
         caption?: string | undefined;
     }, {
-        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
+        sha256: string;
         caption?: string | undefined;
     }>;
 }>, "strip", z.ZodTypeAny, {
     image: {
-        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
+        sha256: string;
         caption?: string | undefined;
     };
     type: "image";
@@ -467,25 +467,25 @@ export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject
     timestamp: Date;
 }, {
     image: {
-        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
+        sha256: string;
         caption?: string | undefined;
     };
     type: "image";
-    errors: {
+    from: string;
+    id: string;
+    timestamp: string;
+    errors?: {
         code: number;
         title: string;
         message: string;
         error_data: {
             details: string;
         };
-    }[];
-    from: string;
-    id: string;
-    timestamp: string;
+    }[] | undefined;
 }>, z.ZodObject<z.objectUtil.extendShape<{
-    errors: z.ZodArray<z.ZodObject<{
+    errors: z.ZodDefault<z.ZodArray<z.ZodObject<{
         code: z.ZodNumber;
         title: z.ZodString;
         message: z.ZodString;
@@ -510,7 +510,7 @@ export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject
         error_data: {
             details: string;
         };
-    }>, "many">;
+    }>, "many">>;
     from: z.ZodString;
     id: z.ZodString;
     timestamp: z.ZodEffects<z.ZodEffects<z.ZodString, string, string>, Date, string>;
@@ -544,17 +544,17 @@ export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject
         body: string;
     };
     type: "text";
-    errors: {
+    from: string;
+    id: string;
+    timestamp: string;
+    errors?: {
         code: number;
         title: string;
         message: string;
         error_data: {
             details: string;
         };
-    }[];
-    from: string;
-    id: string;
-    timestamp: string;
+    }[] | undefined;
 }>]>;
 export type Message = z.infer<typeof messageSchema>;
 export type AudioMessage = z.infer<typeof audioMessageSchema>;

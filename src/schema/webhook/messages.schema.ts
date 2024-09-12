@@ -17,7 +17,7 @@ export const messageErrorSchema = z.object({
 });
 
 export const baseMessageSchema = z.object({
-  errors: z.array(messageErrorSchema),
+  errors: z.array(messageErrorSchema).default([]),
   from: z.string().trim(),
   id: z.string().trim(),
   timestamp: z

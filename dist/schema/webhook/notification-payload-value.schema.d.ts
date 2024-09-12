@@ -34,16 +34,16 @@ export declare const valueErrorSchema: z.ZodObject<{
         details: string;
     }>;
 }, "strip", z.ZodTypeAny, {
+    message: string;
     code: number;
     title: string;
-    message: string;
     error_data: {
         details: string;
     };
 }, {
+    message: string;
     code: number;
     title: string;
-    message: string;
     error_data: {
         details: string;
     };
@@ -94,16 +94,16 @@ export declare const valueSchema: z.ZodObject<{
             details: string;
         }>;
     }, "strip", z.ZodTypeAny, {
+        message: string;
         code: number;
         title: string;
-        message: string;
         error_data: {
             details: string;
         };
     }, {
+        message: string;
         code: number;
         title: string;
-        message: string;
         error_data: {
             details: string;
         };
@@ -121,16 +121,16 @@ export declare const valueSchema: z.ZodObject<{
                 details: string;
             }>;
         }, "strip", z.ZodTypeAny, {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }, {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
@@ -156,15 +156,15 @@ export declare const valueSchema: z.ZodObject<{
             mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
         };
         type: "audio";
+        from: string;
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: Date;
     }, {
@@ -173,15 +173,15 @@ export declare const valueSchema: z.ZodObject<{
             mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
         };
         type: "audio";
+        from: string;
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: string;
     }>, z.ZodObject<z.objectUtil.extendShape<{
@@ -197,16 +197,16 @@ export declare const valueSchema: z.ZodObject<{
                 details: string;
             }>;
         }, "strip", z.ZodTypeAny, {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }, {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
@@ -222,52 +222,52 @@ export declare const valueSchema: z.ZodObject<{
             caption: z.ZodOptional<z.ZodString>;
             sha256: z.ZodString;
         }, "strip", z.ZodTypeAny, {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         }, {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         }>;
     }>, "strip", z.ZodTypeAny, {
         image: {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         };
         type: "image";
+        from: string;
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: Date;
     }, {
         image: {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         };
         type: "image";
+        from: string;
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: string;
     }>, z.ZodObject<z.objectUtil.extendShape<{
@@ -283,16 +283,16 @@ export declare const valueSchema: z.ZodObject<{
                 details: string;
             }>;
         }, "strip", z.ZodTypeAny, {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }, {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
@@ -310,35 +310,35 @@ export declare const valueSchema: z.ZodObject<{
             body: string;
         }>;
     }>, "strip", z.ZodTypeAny, {
+        type: "text";
+        from: string;
         text: {
             body: string;
         };
-        type: "text";
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: Date;
     }, {
+        type: "text";
+        from: string;
         text: {
             body: string;
         };
-        type: "text";
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: string;
     }>]>, "many">;
@@ -354,9 +354,9 @@ export declare const valueSchema: z.ZodObject<{
     }>;
 }, "strip", z.ZodTypeAny, {
     errors: {
+        message: string;
         code: number;
         title: string;
-        message: string;
         error_data: {
             details: string;
         };
@@ -374,50 +374,50 @@ export declare const valueSchema: z.ZodObject<{
             mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
         };
         type: "audio";
+        from: string;
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: Date;
     } | {
+        type: "text";
+        from: string;
         text: {
             body: string;
         };
-        type: "text";
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: Date;
     } | {
         image: {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         };
         type: "image";
+        from: string;
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: Date;
     })[];
@@ -427,9 +427,9 @@ export declare const valueSchema: z.ZodObject<{
     };
 }, {
     errors: {
+        message: string;
         code: number;
         title: string;
-        message: string;
         error_data: {
             details: string;
         };
@@ -447,50 +447,50 @@ export declare const valueSchema: z.ZodObject<{
             mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
         };
         type: "audio";
+        from: string;
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: string;
     } | {
+        type: "text";
+        from: string;
         text: {
             body: string;
         };
-        type: "text";
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: string;
     } | {
         image: {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         };
         type: "image";
+        from: string;
         errors: {
+            message: string;
             code: number;
             title: string;
-            message: string;
             error_data: {
                 details: string;
             };
         }[];
-        from: string;
         id: string;
         timestamp: string;
     })[];

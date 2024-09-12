@@ -1,1 +1,1 @@
-export * as webhook from './schema/webhook';
+export * as webhook from './schema/webhook.js';

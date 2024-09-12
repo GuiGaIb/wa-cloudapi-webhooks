@@ -1,4 +1,4 @@
-import { env } from '../../config/env';
+import { env } from '../../config/env.js';
 export const webhookVerify = (req, res) => {
     const mode = req.query['hub.mode'];
     const token = req.query['hub.verify_token'];

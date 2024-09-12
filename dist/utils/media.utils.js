@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 export const retrieveMediaUrl = (mediaId) => axios.get(`${env.WHATSAPP_API_BASE_URL}/${mediaId}?phone_number_id=${env.WHATSAPP_PHONE_ID}`, {
     headers: {
         Authorization: `Bearer ${env.WHATSAPP_ACCESS_TOKEN}`,

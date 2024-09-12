@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { messageSchema } from './messages.schema';
+import { messageSchema } from './messages.schema.js';
 export const valueContactSchema = z.object({
     wa_id: z.string().trim(),
     user_id: z.string().trim(),

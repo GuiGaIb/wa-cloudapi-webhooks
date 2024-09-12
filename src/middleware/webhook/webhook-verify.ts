@@ -1,6 +1,6 @@
 import type { RequestHandler } from 'express';
 
-import { env } from '../../config/env';
+import { env } from '../../config/env.js';
 
 export const webhookVerify: RequestHandler = (req, res) => {
   const mode = req.query['hub.mode'];

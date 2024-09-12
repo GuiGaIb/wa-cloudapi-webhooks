@@ -1,7 +1,7 @@
 import type { RequestHandler } from 'express';
 import crypto from 'crypto';
 
-import { env } from '../../config/env';
+import { env } from '../../config/env.js';
 
 function unicodeEscape(str: string): string {
   return str.replace(/[^\x00-\x7F]/g, (char) => {

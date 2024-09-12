@@ -1,1 +1,1 @@
-export * as media from './utils/media.utils';
+export * as media from './utils/media.utils.js';

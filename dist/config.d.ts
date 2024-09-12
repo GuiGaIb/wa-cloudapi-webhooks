@@ -1,1 +1,1 @@
-export * as env from './config/env';
+export * as env from './config/env.js';

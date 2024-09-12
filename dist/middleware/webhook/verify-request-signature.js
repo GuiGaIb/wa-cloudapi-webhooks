@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import { env } from '../../config/env';
+import { env } from '../../config/env.js';
 function unicodeEscape(str) {
     return str.replace(/[^\x00-\x7F]/g, (char) => {
         return '\\u' + char.charCodeAt(0).toString(16).padStart(4, '0');

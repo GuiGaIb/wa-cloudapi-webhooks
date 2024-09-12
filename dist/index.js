@@ -1,4 +1,4 @@
-export * as config from './config';
-export * as middleware from './middleware';
-export * as schema from './schema';
-export * as utils from './utils';
+export * as config from './config.js';
+export * as middleware from './middleware.js';
+export * as schema from './schema.js';
+export * as utils from './utils.js';

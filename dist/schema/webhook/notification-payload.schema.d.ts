@@ -36,16 +36,16 @@ export declare const changeSchema: z.ZodObject<{
                 details: string;
             }>;
         }, "strip", z.ZodTypeAny, {
-            message: string;
             code: number;
             title: string;
+            message: string;
             error_data: {
                 details: string;
             };
         }, {
-            message: string;
             code: number;
             title: string;
+            message: string;
             error_data: {
                 details: string;
             };
@@ -63,16 +63,16 @@ export declare const changeSchema: z.ZodObject<{
                     details: string;
                 }>;
             }, "strip", z.ZodTypeAny, {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }, {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
@@ -98,15 +98,15 @@ export declare const changeSchema: z.ZodObject<{
                 mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
             };
             type: "audio";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: Date;
         }, {
@@ -115,15 +115,15 @@ export declare const changeSchema: z.ZodObject<{
                 mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
             };
             type: "audio";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: string;
         }>, z.ZodObject<z.objectUtil.extendShape<{
@@ -139,16 +139,16 @@ export declare const changeSchema: z.ZodObject<{
                     details: string;
                 }>;
             }, "strip", z.ZodTypeAny, {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }, {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
@@ -182,15 +182,15 @@ export declare const changeSchema: z.ZodObject<{
                 caption?: string | undefined;
             };
             type: "image";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: Date;
         }, {
@@ -201,15 +201,15 @@ export declare const changeSchema: z.ZodObject<{
                 caption?: string | undefined;
             };
             type: "image";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: string;
         }>, z.ZodObject<z.objectUtil.extendShape<{
@@ -225,16 +225,16 @@ export declare const changeSchema: z.ZodObject<{
                     details: string;
                 }>;
             }, "strip", z.ZodTypeAny, {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }, {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
@@ -252,35 +252,35 @@ export declare const changeSchema: z.ZodObject<{
                 body: string;
             }>;
         }>, "strip", z.ZodTypeAny, {
-            type: "text";
-            from: string;
             text: {
                 body: string;
             };
+            type: "text";
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: Date;
         }, {
-            type: "text";
-            from: string;
             text: {
                 body: string;
             };
+            type: "text";
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: string;
         }>]>, "many">;
@@ -296,9 +296,9 @@ export declare const changeSchema: z.ZodObject<{
         }>;
     }, "strip", z.ZodTypeAny, {
         errors: {
-            message: string;
             code: number;
             title: string;
+            message: string;
             error_data: {
                 details: string;
             };
@@ -316,31 +316,31 @@ export declare const changeSchema: z.ZodObject<{
                 mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
             };
             type: "audio";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: Date;
         } | {
-            type: "text";
-            from: string;
             text: {
                 body: string;
             };
+            type: "text";
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: Date;
         } | {
@@ -351,15 +351,15 @@ export declare const changeSchema: z.ZodObject<{
                 caption?: string | undefined;
             };
             type: "image";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: Date;
         })[];
@@ -369,9 +369,9 @@ export declare const changeSchema: z.ZodObject<{
         };
     }, {
         errors: {
-            message: string;
             code: number;
             title: string;
+            message: string;
             error_data: {
                 details: string;
             };
@@ -389,31 +389,31 @@ export declare const changeSchema: z.ZodObject<{
                 mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
             };
             type: "audio";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: string;
         } | {
-            type: "text";
-            from: string;
             text: {
                 body: string;
             };
+            type: "text";
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: string;
         } | {
@@ -424,15 +424,15 @@ export declare const changeSchema: z.ZodObject<{
                 caption?: string | undefined;
             };
             type: "image";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: string;
         })[];
@@ -445,9 +445,9 @@ export declare const changeSchema: z.ZodObject<{
 }, "strip", z.ZodTypeAny, {
     value: {
         errors: {
-            message: string;
             code: number;
             title: string;
+            message: string;
             error_data: {
                 details: string;
             };
@@ -465,31 +465,31 @@ export declare const changeSchema: z.ZodObject<{
                 mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
             };
             type: "audio";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: Date;
         } | {
-            type: "text";
-            from: string;
             text: {
                 body: string;
             };
+            type: "text";
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: Date;
         } | {
@@ -500,15 +500,15 @@ export declare const changeSchema: z.ZodObject<{
                 caption?: string | undefined;
             };
             type: "image";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: Date;
         })[];
@@ -521,9 +521,9 @@ export declare const changeSchema: z.ZodObject<{
 }, {
     value: {
         errors: {
-            message: string;
             code: number;
             title: string;
+            message: string;
             error_data: {
                 details: string;
             };
@@ -541,31 +541,31 @@ export declare const changeSchema: z.ZodObject<{
                 mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
             };
             type: "audio";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: string;
         } | {
-            type: "text";
-            from: string;
             text: {
                 body: string;
             };
+            type: "text";
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: string;
         } | {
@@ -576,15 +576,15 @@ export declare const changeSchema: z.ZodObject<{
                 caption?: string | undefined;
             };
             type: "image";
-            from: string;
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }[];
+            from: string;
             id: string;
             timestamp: string;
         })[];
@@ -634,16 +634,16 @@ export declare const entrySchema: z.ZodObject<{
                     details: string;
                 }>;
             }, "strip", z.ZodTypeAny, {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
             }, {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
@@ -661,16 +661,16 @@ export declare const entrySchema: z.ZodObject<{
                         details: string;
                     }>;
                 }, "strip", z.ZodTypeAny, {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }, {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -696,15 +696,15 @@ export declare const entrySchema: z.ZodObject<{
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
                 type: "audio";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             }, {
@@ -713,15 +713,15 @@ export declare const entrySchema: z.ZodObject<{
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
                 type: "audio";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             }>, z.ZodObject<z.objectUtil.extendShape<{
@@ -737,16 +737,16 @@ export declare const entrySchema: z.ZodObject<{
                         details: string;
                     }>;
                 }, "strip", z.ZodTypeAny, {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }, {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -780,15 +780,15 @@ export declare const entrySchema: z.ZodObject<{
                     caption?: string | undefined;
                 };
                 type: "image";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             }, {
@@ -799,15 +799,15 @@ export declare const entrySchema: z.ZodObject<{
                     caption?: string | undefined;
                 };
                 type: "image";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             }>, z.ZodObject<z.objectUtil.extendShape<{
@@ -823,16 +823,16 @@ export declare const entrySchema: z.ZodObject<{
                         details: string;
                     }>;
                 }, "strip", z.ZodTypeAny, {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }, {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -850,35 +850,35 @@ export declare const entrySchema: z.ZodObject<{
                     body: string;
                 }>;
             }>, "strip", z.ZodTypeAny, {
-                type: "text";
-                from: string;
                 text: {
                     body: string;
                 };
+                type: "text";
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             }, {
-                type: "text";
-                from: string;
                 text: {
                     body: string;
                 };
+                type: "text";
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             }>]>, "many">;
@@ -894,9 +894,9 @@ export declare const entrySchema: z.ZodObject<{
             }>;
         }, "strip", z.ZodTypeAny, {
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
@@ -914,31 +914,31 @@ export declare const entrySchema: z.ZodObject<{
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
                 type: "audio";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             } | {
-                type: "text";
-                from: string;
                 text: {
                     body: string;
                 };
+                type: "text";
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             } | {
@@ -949,15 +949,15 @@ export declare const entrySchema: z.ZodObject<{
                     caption?: string | undefined;
                 };
                 type: "image";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             })[];
@@ -967,9 +967,9 @@ export declare const entrySchema: z.ZodObject<{
             };
         }, {
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
@@ -987,31 +987,31 @@ export declare const entrySchema: z.ZodObject<{
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
                 type: "audio";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             } | {
-                type: "text";
-                from: string;
                 text: {
                     body: string;
                 };
+                type: "text";
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             } | {
@@ -1022,15 +1022,15 @@ export declare const entrySchema: z.ZodObject<{
                     caption?: string | undefined;
                 };
                 type: "image";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             })[];
@@ -1043,9 +1043,9 @@ export declare const entrySchema: z.ZodObject<{
     }, "strip", z.ZodTypeAny, {
         value: {
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
@@ -1063,31 +1063,31 @@ export declare const entrySchema: z.ZodObject<{
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
                 type: "audio";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             } | {
-                type: "text";
-                from: string;
                 text: {
                     body: string;
                 };
+                type: "text";
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             } | {
@@ -1098,15 +1098,15 @@ export declare const entrySchema: z.ZodObject<{
                     caption?: string | undefined;
                 };
                 type: "image";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             })[];
@@ -1119,9 +1119,9 @@ export declare const entrySchema: z.ZodObject<{
     }, {
         value: {
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
@@ -1139,31 +1139,31 @@ export declare const entrySchema: z.ZodObject<{
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
                 type: "audio";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             } | {
-                type: "text";
-                from: string;
                 text: {
                     body: string;
                 };
+                type: "text";
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             } | {
@@ -1174,15 +1174,15 @@ export declare const entrySchema: z.ZodObject<{
                     caption?: string | undefined;
                 };
                 type: "image";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             })[];
@@ -1198,9 +1198,9 @@ export declare const entrySchema: z.ZodObject<{
     changes: {
         value: {
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
@@ -1218,31 +1218,31 @@ export declare const entrySchema: z.ZodObject<{
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
                 type: "audio";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             } | {
-                type: "text";
-                from: string;
                 text: {
                     body: string;
                 };
+                type: "text";
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             } | {
@@ -1253,15 +1253,15 @@ export declare const entrySchema: z.ZodObject<{
                     caption?: string | undefined;
                 };
                 type: "image";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: Date;
             })[];
@@ -1277,9 +1277,9 @@ export declare const entrySchema: z.ZodObject<{
     changes: {
         value: {
             errors: {
-                message: string;
                 code: number;
                 title: string;
+                message: string;
                 error_data: {
                     details: string;
                 };
@@ -1297,31 +1297,31 @@ export declare const entrySchema: z.ZodObject<{
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
                 type: "audio";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             } | {
-                type: "text";
-                from: string;
                 text: {
                     body: string;
                 };
+                type: "text";
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             } | {
@@ -1332,15 +1332,15 @@ export declare const entrySchema: z.ZodObject<{
                     caption?: string | undefined;
                 };
                 type: "image";
-                from: string;
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }[];
+                from: string;
                 id: string;
                 timestamp: string;
             })[];
@@ -1393,16 +1393,16 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         details: string;
                     }>;
                 }, "strip", z.ZodTypeAny, {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
                 }, {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -1420,16 +1420,16 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                             details: string;
                         }>;
                     }, "strip", z.ZodTypeAny, {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }, {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
@@ -1455,15 +1455,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
                     type: "audio";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 }, {
@@ -1472,15 +1472,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
                     type: "audio";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 }>, z.ZodObject<z.objectUtil.extendShape<{
@@ -1496,16 +1496,16 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                             details: string;
                         }>;
                     }, "strip", z.ZodTypeAny, {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }, {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
@@ -1539,15 +1539,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption?: string | undefined;
                     };
                     type: "image";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 }, {
@@ -1558,15 +1558,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption?: string | undefined;
                     };
                     type: "image";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 }>, z.ZodObject<z.objectUtil.extendShape<{
@@ -1582,16 +1582,16 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                             details: string;
                         }>;
                     }, "strip", z.ZodTypeAny, {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }, {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
@@ -1609,35 +1609,35 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         body: string;
                     }>;
                 }>, "strip", z.ZodTypeAny, {
-                    type: "text";
-                    from: string;
                     text: {
                         body: string;
                     };
+                    type: "text";
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 }, {
-                    type: "text";
-                    from: string;
                     text: {
                         body: string;
                     };
+                    type: "text";
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 }>]>, "many">;
@@ -1653,9 +1653,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                 }>;
             }, "strip", z.ZodTypeAny, {
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -1673,31 +1673,31 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
                     type: "audio";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 } | {
-                    type: "text";
-                    from: string;
                     text: {
                         body: string;
                     };
+                    type: "text";
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 } | {
@@ -1708,15 +1708,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption?: string | undefined;
                     };
                     type: "image";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 })[];
@@ -1726,9 +1726,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                 };
             }, {
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -1746,31 +1746,31 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
                     type: "audio";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 } | {
-                    type: "text";
-                    from: string;
                     text: {
                         body: string;
                     };
+                    type: "text";
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 } | {
@@ -1781,15 +1781,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption?: string | undefined;
                     };
                     type: "image";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 })[];
@@ -1802,9 +1802,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
         }, "strip", z.ZodTypeAny, {
             value: {
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -1822,31 +1822,31 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
                     type: "audio";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 } | {
-                    type: "text";
-                    from: string;
                     text: {
                         body: string;
                     };
+                    type: "text";
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 } | {
@@ -1857,15 +1857,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption?: string | undefined;
                     };
                     type: "image";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 })[];
@@ -1878,9 +1878,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
         }, {
             value: {
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -1898,31 +1898,31 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
                     type: "audio";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 } | {
-                    type: "text";
-                    from: string;
                     text: {
                         body: string;
                     };
+                    type: "text";
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 } | {
@@ -1933,15 +1933,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption?: string | undefined;
                     };
                     type: "image";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 })[];
@@ -1957,9 +1957,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
         changes: {
             value: {
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -1977,31 +1977,31 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
                     type: "audio";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 } | {
-                    type: "text";
-                    from: string;
                     text: {
                         body: string;
                     };
+                    type: "text";
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 } | {
@@ -2012,15 +2012,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption?: string | undefined;
                     };
                     type: "image";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 })[];
@@ -2036,9 +2036,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
         changes: {
             value: {
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -2056,31 +2056,31 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
                     type: "audio";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 } | {
-                    type: "text";
-                    from: string;
                     text: {
                         body: string;
                     };
+                    type: "text";
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 } | {
@@ -2091,15 +2091,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption?: string | undefined;
                     };
                     type: "image";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 })[];
@@ -2118,9 +2118,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
         changes: {
             value: {
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -2138,31 +2138,31 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
                     type: "audio";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 } | {
-                    type: "text";
-                    from: string;
                     text: {
                         body: string;
                     };
+                    type: "text";
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 } | {
@@ -2173,15 +2173,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption?: string | undefined;
                     };
                     type: "image";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: Date;
                 })[];
@@ -2200,9 +2200,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
         changes: {
             value: {
                 errors: {
-                    message: string;
                     code: number;
                     title: string;
+                    message: string;
                     error_data: {
                         details: string;
                     };
@@ -2220,31 +2220,31 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
                     type: "audio";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 } | {
-                    type: "text";
-                    from: string;
                     text: {
                         body: string;
                     };
+                    type: "text";
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 } | {
@@ -2255,15 +2255,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption?: string | undefined;
                     };
                     type: "image";
-                    from: string;
                     errors: {
-                        message: string;
                         code: number;
                         title: string;
+                        message: string;
                         error_data: {
                             details: string;
                         };
                     }[];
+                    from: string;
                     id: string;
                     timestamp: string;
                 })[];

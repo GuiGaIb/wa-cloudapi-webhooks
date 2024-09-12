@@ -1,1 +1,1 @@
-export * as webhook from './middleware/webhook';
+export * as webhook from './middleware/webhook.js';

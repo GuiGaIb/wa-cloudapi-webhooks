@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { valueSchema } from './notification-payload-value.schema';
+import { valueSchema } from './notification-payload-value.schema.js';
 export const changeSchema = z.object({
     value: valueSchema,
     field: z.literal('messages'),

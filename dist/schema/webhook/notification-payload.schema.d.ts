@@ -3,7 +3,6 @@ export declare const changeSchema: z.ZodObject<{
     value: z.ZodObject<{
         contacts: z.ZodDefault<z.ZodArray<z.ZodObject<{
             wa_id: z.ZodString;
-            user_id: z.ZodString;
             profile: z.ZodObject<{
                 name: z.ZodString;
             }, "strip", z.ZodTypeAny, {
@@ -13,13 +12,11 @@ export declare const changeSchema: z.ZodObject<{
             }>;
         }, "strip", z.ZodTypeAny, {
             wa_id: string;
-            user_id: string;
             profile: {
                 name: string;
             };
         }, {
             wa_id: string;
-            user_id: string;
             profile: {
                 name: string;
             };
@@ -37,15 +34,15 @@ export declare const changeSchema: z.ZodObject<{
             }>;
         }, "strip", z.ZodTypeAny, {
             code: number;
-            title: string;
             message: string;
+            title: string;
             error_data: {
                 details: string;
             };
         }, {
             code: number;
-            title: string;
             message: string;
+            title: string;
             error_data: {
                 details: string;
             };
@@ -64,15 +61,15 @@ export declare const changeSchema: z.ZodObject<{
                 }>;
             }, "strip", z.ZodTypeAny, {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
             }, {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -93,15 +90,11 @@ export declare const changeSchema: z.ZodObject<{
                 mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
             }>;
         }>, "strip", z.ZodTypeAny, {
-            audio: {
-                id: string;
-                mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
-            };
             type: "audio";
             errors: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -109,19 +102,23 @@ export declare const changeSchema: z.ZodObject<{
             from: string;
             id: string;
             timestamp: Date;
-        }, {
             audio: {
                 id: string;
                 mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
             };
+        }, {
             type: "audio";
             from: string;
             id: string;
             timestamp: string;
+            audio: {
+                id: string;
+                mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+            };
             errors?: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -140,15 +137,15 @@ export declare const changeSchema: z.ZodObject<{
                 }>;
             }, "strip", z.ZodTypeAny, {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
             }, {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -175,17 +172,11 @@ export declare const changeSchema: z.ZodObject<{
                 caption?: string | undefined;
             }>;
         }>, "strip", z.ZodTypeAny, {
-            image: {
-                id: string;
-                mime_type: "image/jpeg" | "image/png";
-                sha256: string;
-                caption?: string | undefined;
-            };
             type: "image";
             errors: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -193,21 +184,27 @@ export declare const changeSchema: z.ZodObject<{
             from: string;
             id: string;
             timestamp: Date;
-        }, {
             image: {
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
                 sha256: string;
                 caption?: string | undefined;
             };
+        }, {
             type: "image";
             from: string;
             id: string;
             timestamp: string;
+            image: {
+                id: string;
+                mime_type: "image/jpeg" | "image/png";
+                sha256: string;
+                caption?: string | undefined;
+            };
             errors?: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -226,15 +223,15 @@ export declare const changeSchema: z.ZodObject<{
                 }>;
             }, "strip", z.ZodTypeAny, {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
             }, {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -252,14 +249,11 @@ export declare const changeSchema: z.ZodObject<{
                 body: string;
             }>;
         }>, "strip", z.ZodTypeAny, {
-            text: {
-                body: string;
-            };
             type: "text";
             errors: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -267,18 +261,21 @@ export declare const changeSchema: z.ZodObject<{
             from: string;
             id: string;
             timestamp: Date;
-        }, {
             text: {
                 body: string;
             };
+        }, {
             type: "text";
             from: string;
             id: string;
             timestamp: string;
+            text: {
+                body: string;
+            };
             errors?: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -295,31 +292,43 @@ export declare const changeSchema: z.ZodObject<{
             phone_number_id: string;
         }>;
     }, "strip", z.ZodTypeAny, {
-        errors: {
-            code: number;
-            title: string;
-            message: string;
-            error_data: {
-                details: string;
-            };
-        }[];
         contacts: {
             wa_id: string;
-            user_id: string;
             profile: {
                 name: string;
             };
         }[];
+        errors: {
+            code: number;
+            message: string;
+            title: string;
+            error_data: {
+                details: string;
+            };
+        }[];
         messages: ({
+            type: "audio";
+            errors: {
+                code: number;
+                message: string;
+                title: string;
+                error_data: {
+                    details: string;
+                };
+            }[];
+            from: string;
+            id: string;
+            timestamp: Date;
             audio: {
                 id: string;
                 mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
             };
-            type: "audio";
+        } | {
+            type: "image";
             errors: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -327,34 +336,18 @@ export declare const changeSchema: z.ZodObject<{
             from: string;
             id: string;
             timestamp: Date;
-        } | {
-            text: {
-                body: string;
-            };
-            type: "text";
-            errors: {
-                code: number;
-                title: string;
-                message: string;
-                error_data: {
-                    details: string;
-                };
-            }[];
-            from: string;
-            id: string;
-            timestamp: Date;
-        } | {
             image: {
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
                 sha256: string;
                 caption?: string | undefined;
             };
-            type: "image";
+        } | {
+            type: "text";
             errors: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -362,6 +355,9 @@ export declare const changeSchema: z.ZodObject<{
             from: string;
             id: string;
             timestamp: Date;
+            text: {
+                body: string;
+            };
         })[];
         metadata: {
             display_phone_number: string;
@@ -372,69 +368,68 @@ export declare const changeSchema: z.ZodObject<{
             display_phone_number: string;
             phone_number_id: string;
         };
-        errors?: {
-            code: number;
-            title: string;
-            message: string;
-            error_data: {
-                details: string;
-            };
-        }[] | undefined;
         contacts?: {
             wa_id: string;
-            user_id: string;
             profile: {
                 name: string;
             };
         }[] | undefined;
-        messages?: ({
-            audio: {
-                id: string;
-                mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+        errors?: {
+            code: number;
+            message: string;
+            title: string;
+            error_data: {
+                details: string;
             };
+        }[] | undefined;
+        messages?: ({
             type: "audio";
             from: string;
             id: string;
             timestamp: string;
+            audio: {
+                id: string;
+                mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+            };
             errors?: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
             }[] | undefined;
         } | {
-            text: {
-                body: string;
-            };
-            type: "text";
+            type: "image";
             from: string;
             id: string;
             timestamp: string;
-            errors?: {
-                code: number;
-                title: string;
-                message: string;
-                error_data: {
-                    details: string;
-                };
-            }[] | undefined;
-        } | {
             image: {
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
                 sha256: string;
                 caption?: string | undefined;
             };
-            type: "image";
+            errors?: {
+                code: number;
+                message: string;
+                title: string;
+                error_data: {
+                    details: string;
+                };
+            }[] | undefined;
+        } | {
+            type: "text";
             from: string;
             id: string;
             timestamp: string;
+            text: {
+                body: string;
+            };
             errors?: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -444,31 +439,43 @@ export declare const changeSchema: z.ZodObject<{
     field: z.ZodLiteral<"messages">;
 }, "strip", z.ZodTypeAny, {
     value: {
-        errors: {
-            code: number;
-            title: string;
-            message: string;
-            error_data: {
-                details: string;
-            };
-        }[];
         contacts: {
             wa_id: string;
-            user_id: string;
             profile: {
                 name: string;
             };
         }[];
+        errors: {
+            code: number;
+            message: string;
+            title: string;
+            error_data: {
+                details: string;
+            };
+        }[];
         messages: ({
+            type: "audio";
+            errors: {
+                code: number;
+                message: string;
+                title: string;
+                error_data: {
+                    details: string;
+                };
+            }[];
+            from: string;
+            id: string;
+            timestamp: Date;
             audio: {
                 id: string;
                 mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
             };
-            type: "audio";
+        } | {
+            type: "image";
             errors: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -476,34 +483,18 @@ export declare const changeSchema: z.ZodObject<{
             from: string;
             id: string;
             timestamp: Date;
-        } | {
-            text: {
-                body: string;
-            };
-            type: "text";
-            errors: {
-                code: number;
-                title: string;
-                message: string;
-                error_data: {
-                    details: string;
-                };
-            }[];
-            from: string;
-            id: string;
-            timestamp: Date;
-        } | {
             image: {
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
                 sha256: string;
                 caption?: string | undefined;
             };
-            type: "image";
+        } | {
+            type: "text";
             errors: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -511,6 +502,9 @@ export declare const changeSchema: z.ZodObject<{
             from: string;
             id: string;
             timestamp: Date;
+            text: {
+                body: string;
+            };
         })[];
         metadata: {
             display_phone_number: string;
@@ -524,69 +518,68 @@ export declare const changeSchema: z.ZodObject<{
             display_phone_number: string;
             phone_number_id: string;
         };
-        errors?: {
-            code: number;
-            title: string;
-            message: string;
-            error_data: {
-                details: string;
-            };
-        }[] | undefined;
         contacts?: {
             wa_id: string;
-            user_id: string;
             profile: {
                 name: string;
             };
         }[] | undefined;
-        messages?: ({
-            audio: {
-                id: string;
-                mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+        errors?: {
+            code: number;
+            message: string;
+            title: string;
+            error_data: {
+                details: string;
             };
+        }[] | undefined;
+        messages?: ({
             type: "audio";
             from: string;
             id: string;
             timestamp: string;
+            audio: {
+                id: string;
+                mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+            };
             errors?: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
             }[] | undefined;
         } | {
-            text: {
-                body: string;
-            };
-            type: "text";
+            type: "image";
             from: string;
             id: string;
             timestamp: string;
-            errors?: {
-                code: number;
-                title: string;
-                message: string;
-                error_data: {
-                    details: string;
-                };
-            }[] | undefined;
-        } | {
             image: {
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
                 sha256: string;
                 caption?: string | undefined;
             };
-            type: "image";
+            errors?: {
+                code: number;
+                message: string;
+                title: string;
+                error_data: {
+                    details: string;
+                };
+            }[] | undefined;
+        } | {
+            type: "text";
             from: string;
             id: string;
             timestamp: string;
+            text: {
+                body: string;
+            };
             errors?: {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -601,7 +594,6 @@ export declare const entrySchema: z.ZodObject<{
         value: z.ZodObject<{
             contacts: z.ZodDefault<z.ZodArray<z.ZodObject<{
                 wa_id: z.ZodString;
-                user_id: z.ZodString;
                 profile: z.ZodObject<{
                     name: z.ZodString;
                 }, "strip", z.ZodTypeAny, {
@@ -611,13 +603,11 @@ export declare const entrySchema: z.ZodObject<{
                 }>;
             }, "strip", z.ZodTypeAny, {
                 wa_id: string;
-                user_id: string;
                 profile: {
                     name: string;
                 };
             }, {
                 wa_id: string;
-                user_id: string;
                 profile: {
                     name: string;
                 };
@@ -635,15 +625,15 @@ export declare const entrySchema: z.ZodObject<{
                 }>;
             }, "strip", z.ZodTypeAny, {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
             }, {
                 code: number;
-                title: string;
                 message: string;
+                title: string;
                 error_data: {
                     details: string;
                 };
@@ -662,15 +652,15 @@ export declare const entrySchema: z.ZodObject<{
                     }>;
                 }, "strip", z.ZodTypeAny, {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
                 }, {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -691,15 +681,11 @@ export declare const entrySchema: z.ZodObject<{
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 }>;
             }>, "strip", z.ZodTypeAny, {
-                audio: {
-                    id: string;
-                    mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
-                };
                 type: "audio";
                 errors: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -707,19 +693,23 @@ export declare const entrySchema: z.ZodObject<{
                 from: string;
                 id: string;
                 timestamp: Date;
-            }, {
                 audio: {
                     id: string;
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
+            }, {
                 type: "audio";
                 from: string;
                 id: string;
                 timestamp: string;
+                audio: {
+                    id: string;
+                    mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                };
                 errors?: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -738,15 +728,15 @@ export declare const entrySchema: z.ZodObject<{
                     }>;
                 }, "strip", z.ZodTypeAny, {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
                 }, {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -773,17 +763,11 @@ export declare const entrySchema: z.ZodObject<{
                     caption?: string | undefined;
                 }>;
             }>, "strip", z.ZodTypeAny, {
-                image: {
-                    id: string;
-                    mime_type: "image/jpeg" | "image/png";
-                    sha256: string;
-                    caption?: string | undefined;
-                };
                 type: "image";
                 errors: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -791,21 +775,27 @@ export declare const entrySchema: z.ZodObject<{
                 from: string;
                 id: string;
                 timestamp: Date;
-            }, {
                 image: {
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
                     sha256: string;
                     caption?: string | undefined;
                 };
+            }, {
                 type: "image";
                 from: string;
                 id: string;
                 timestamp: string;
+                image: {
+                    id: string;
+                    mime_type: "image/jpeg" | "image/png";
+                    sha256: string;
+                    caption?: string | undefined;
+                };
                 errors?: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -824,15 +814,15 @@ export declare const entrySchema: z.ZodObject<{
                     }>;
                 }, "strip", z.ZodTypeAny, {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
                 }, {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -850,14 +840,11 @@ export declare const entrySchema: z.ZodObject<{
                     body: string;
                 }>;
             }>, "strip", z.ZodTypeAny, {
-                text: {
-                    body: string;
-                };
                 type: "text";
                 errors: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -865,18 +852,21 @@ export declare const entrySchema: z.ZodObject<{
                 from: string;
                 id: string;
                 timestamp: Date;
-            }, {
                 text: {
                     body: string;
                 };
+            }, {
                 type: "text";
                 from: string;
                 id: string;
                 timestamp: string;
+                text: {
+                    body: string;
+                };
                 errors?: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -893,31 +883,43 @@ export declare const entrySchema: z.ZodObject<{
                 phone_number_id: string;
             }>;
         }, "strip", z.ZodTypeAny, {
-            errors: {
-                code: number;
-                title: string;
-                message: string;
-                error_data: {
-                    details: string;
-                };
-            }[];
             contacts: {
                 wa_id: string;
-                user_id: string;
                 profile: {
                     name: string;
                 };
             }[];
+            errors: {
+                code: number;
+                message: string;
+                title: string;
+                error_data: {
+                    details: string;
+                };
+            }[];
             messages: ({
+                type: "audio";
+                errors: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
+                    };
+                }[];
+                from: string;
+                id: string;
+                timestamp: Date;
                 audio: {
                     id: string;
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
-                type: "audio";
+            } | {
+                type: "image";
                 errors: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -925,34 +927,18 @@ export declare const entrySchema: z.ZodObject<{
                 from: string;
                 id: string;
                 timestamp: Date;
-            } | {
-                text: {
-                    body: string;
-                };
-                type: "text";
-                errors: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[];
-                from: string;
-                id: string;
-                timestamp: Date;
-            } | {
                 image: {
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
                     sha256: string;
                     caption?: string | undefined;
                 };
-                type: "image";
+            } | {
+                type: "text";
                 errors: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -960,6 +946,9 @@ export declare const entrySchema: z.ZodObject<{
                 from: string;
                 id: string;
                 timestamp: Date;
+                text: {
+                    body: string;
+                };
             })[];
             metadata: {
                 display_phone_number: string;
@@ -970,69 +959,68 @@ export declare const entrySchema: z.ZodObject<{
                 display_phone_number: string;
                 phone_number_id: string;
             };
-            errors?: {
-                code: number;
-                title: string;
-                message: string;
-                error_data: {
-                    details: string;
-                };
-            }[] | undefined;
             contacts?: {
                 wa_id: string;
-                user_id: string;
                 profile: {
                     name: string;
                 };
             }[] | undefined;
-            messages?: ({
-                audio: {
-                    id: string;
-                    mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+            errors?: {
+                code: number;
+                message: string;
+                title: string;
+                error_data: {
+                    details: string;
                 };
+            }[] | undefined;
+            messages?: ({
                 type: "audio";
                 from: string;
                 id: string;
                 timestamp: string;
+                audio: {
+                    id: string;
+                    mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                };
                 errors?: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
                 }[] | undefined;
             } | {
-                text: {
-                    body: string;
-                };
-                type: "text";
+                type: "image";
                 from: string;
                 id: string;
                 timestamp: string;
-                errors?: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[] | undefined;
-            } | {
                 image: {
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
                     sha256: string;
                     caption?: string | undefined;
                 };
-                type: "image";
+                errors?: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
+                    };
+                }[] | undefined;
+            } | {
+                type: "text";
                 from: string;
                 id: string;
                 timestamp: string;
+                text: {
+                    body: string;
+                };
                 errors?: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -1042,31 +1030,43 @@ export declare const entrySchema: z.ZodObject<{
         field: z.ZodLiteral<"messages">;
     }, "strip", z.ZodTypeAny, {
         value: {
-            errors: {
-                code: number;
-                title: string;
-                message: string;
-                error_data: {
-                    details: string;
-                };
-            }[];
             contacts: {
                 wa_id: string;
-                user_id: string;
                 profile: {
                     name: string;
                 };
             }[];
+            errors: {
+                code: number;
+                message: string;
+                title: string;
+                error_data: {
+                    details: string;
+                };
+            }[];
             messages: ({
+                type: "audio";
+                errors: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
+                    };
+                }[];
+                from: string;
+                id: string;
+                timestamp: Date;
                 audio: {
                     id: string;
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
-                type: "audio";
+            } | {
+                type: "image";
                 errors: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -1074,34 +1074,18 @@ export declare const entrySchema: z.ZodObject<{
                 from: string;
                 id: string;
                 timestamp: Date;
-            } | {
-                text: {
-                    body: string;
-                };
-                type: "text";
-                errors: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[];
-                from: string;
-                id: string;
-                timestamp: Date;
-            } | {
                 image: {
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
                     sha256: string;
                     caption?: string | undefined;
                 };
-                type: "image";
+            } | {
+                type: "text";
                 errors: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -1109,6 +1093,9 @@ export declare const entrySchema: z.ZodObject<{
                 from: string;
                 id: string;
                 timestamp: Date;
+                text: {
+                    body: string;
+                };
             })[];
             metadata: {
                 display_phone_number: string;
@@ -1122,69 +1109,68 @@ export declare const entrySchema: z.ZodObject<{
                 display_phone_number: string;
                 phone_number_id: string;
             };
-            errors?: {
-                code: number;
-                title: string;
-                message: string;
-                error_data: {
-                    details: string;
-                };
-            }[] | undefined;
             contacts?: {
                 wa_id: string;
-                user_id: string;
                 profile: {
                     name: string;
                 };
             }[] | undefined;
-            messages?: ({
-                audio: {
-                    id: string;
-                    mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+            errors?: {
+                code: number;
+                message: string;
+                title: string;
+                error_data: {
+                    details: string;
                 };
+            }[] | undefined;
+            messages?: ({
                 type: "audio";
                 from: string;
                 id: string;
                 timestamp: string;
+                audio: {
+                    id: string;
+                    mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                };
                 errors?: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
                 }[] | undefined;
             } | {
-                text: {
-                    body: string;
-                };
-                type: "text";
+                type: "image";
                 from: string;
                 id: string;
                 timestamp: string;
-                errors?: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[] | undefined;
-            } | {
                 image: {
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
                     sha256: string;
                     caption?: string | undefined;
                 };
-                type: "image";
+                errors?: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
+                    };
+                }[] | undefined;
+            } | {
+                type: "text";
                 from: string;
                 id: string;
                 timestamp: string;
+                text: {
+                    body: string;
+                };
                 errors?: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -1197,31 +1183,43 @@ export declare const entrySchema: z.ZodObject<{
     id: string;
     changes: {
         value: {
-            errors: {
-                code: number;
-                title: string;
-                message: string;
-                error_data: {
-                    details: string;
-                };
-            }[];
             contacts: {
                 wa_id: string;
-                user_id: string;
                 profile: {
                     name: string;
                 };
             }[];
+            errors: {
+                code: number;
+                message: string;
+                title: string;
+                error_data: {
+                    details: string;
+                };
+            }[];
             messages: ({
+                type: "audio";
+                errors: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
+                    };
+                }[];
+                from: string;
+                id: string;
+                timestamp: Date;
                 audio: {
                     id: string;
                     mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                 };
-                type: "audio";
+            } | {
+                type: "image";
                 errors: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -1229,34 +1227,18 @@ export declare const entrySchema: z.ZodObject<{
                 from: string;
                 id: string;
                 timestamp: Date;
-            } | {
-                text: {
-                    body: string;
-                };
-                type: "text";
-                errors: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[];
-                from: string;
-                id: string;
-                timestamp: Date;
-            } | {
                 image: {
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
                     sha256: string;
                     caption?: string | undefined;
                 };
-                type: "image";
+            } | {
+                type: "text";
                 errors: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -1264,6 +1246,9 @@ export declare const entrySchema: z.ZodObject<{
                 from: string;
                 id: string;
                 timestamp: Date;
+                text: {
+                    body: string;
+                };
             })[];
             metadata: {
                 display_phone_number: string;
@@ -1280,69 +1265,68 @@ export declare const entrySchema: z.ZodObject<{
                 display_phone_number: string;
                 phone_number_id: string;
             };
-            errors?: {
-                code: number;
-                title: string;
-                message: string;
-                error_data: {
-                    details: string;
-                };
-            }[] | undefined;
             contacts?: {
                 wa_id: string;
-                user_id: string;
                 profile: {
                     name: string;
                 };
             }[] | undefined;
-            messages?: ({
-                audio: {
-                    id: string;
-                    mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+            errors?: {
+                code: number;
+                message: string;
+                title: string;
+                error_data: {
+                    details: string;
                 };
+            }[] | undefined;
+            messages?: ({
                 type: "audio";
                 from: string;
                 id: string;
                 timestamp: string;
+                audio: {
+                    id: string;
+                    mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                };
                 errors?: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
                 }[] | undefined;
             } | {
-                text: {
-                    body: string;
-                };
-                type: "text";
+                type: "image";
                 from: string;
                 id: string;
                 timestamp: string;
-                errors?: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[] | undefined;
-            } | {
                 image: {
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
                     sha256: string;
                     caption?: string | undefined;
                 };
-                type: "image";
+                errors?: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
+                    };
+                }[] | undefined;
+            } | {
+                type: "text";
                 from: string;
                 id: string;
                 timestamp: string;
+                text: {
+                    body: string;
+                };
                 errors?: {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -1360,7 +1344,6 @@ export declare const notificationPayloadSchema: z.ZodObject<{
             value: z.ZodObject<{
                 contacts: z.ZodDefault<z.ZodArray<z.ZodObject<{
                     wa_id: z.ZodString;
-                    user_id: z.ZodString;
                     profile: z.ZodObject<{
                         name: z.ZodString;
                     }, "strip", z.ZodTypeAny, {
@@ -1370,13 +1353,11 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     }>;
                 }, "strip", z.ZodTypeAny, {
                     wa_id: string;
-                    user_id: string;
                     profile: {
                         name: string;
                     };
                 }, {
                     wa_id: string;
-                    user_id: string;
                     profile: {
                         name: string;
                     };
@@ -1394,15 +1375,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     }>;
                 }, "strip", z.ZodTypeAny, {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
                 }, {
                     code: number;
-                    title: string;
                     message: string;
+                    title: string;
                     error_data: {
                         details: string;
                     };
@@ -1421,15 +1402,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         }>;
                     }, "strip", z.ZodTypeAny, {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
                     }, {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1450,15 +1431,11 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     }>;
                 }>, "strip", z.ZodTypeAny, {
-                    audio: {
-                        id: string;
-                        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
-                    };
                     type: "audio";
                     errors: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1466,19 +1443,23 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     from: string;
                     id: string;
                     timestamp: Date;
-                }, {
                     audio: {
                         id: string;
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
+                }, {
                     type: "audio";
                     from: string;
                     id: string;
                     timestamp: string;
+                    audio: {
+                        id: string;
+                        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                    };
                     errors?: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1497,15 +1478,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         }>;
                     }, "strip", z.ZodTypeAny, {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
                     }, {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1532,17 +1513,11 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption?: string | undefined;
                     }>;
                 }>, "strip", z.ZodTypeAny, {
-                    image: {
-                        id: string;
-                        mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
-                        caption?: string | undefined;
-                    };
                     type: "image";
                     errors: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1550,21 +1525,27 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     from: string;
                     id: string;
                     timestamp: Date;
-                }, {
                     image: {
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
                         sha256: string;
                         caption?: string | undefined;
                     };
+                }, {
                     type: "image";
                     from: string;
                     id: string;
                     timestamp: string;
+                    image: {
+                        id: string;
+                        mime_type: "image/jpeg" | "image/png";
+                        sha256: string;
+                        caption?: string | undefined;
+                    };
                     errors?: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1583,15 +1564,15 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         }>;
                     }, "strip", z.ZodTypeAny, {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
                     }, {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1609,14 +1590,11 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         body: string;
                     }>;
                 }>, "strip", z.ZodTypeAny, {
-                    text: {
-                        body: string;
-                    };
                     type: "text";
                     errors: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1624,18 +1602,21 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     from: string;
                     id: string;
                     timestamp: Date;
-                }, {
                     text: {
                         body: string;
                     };
+                }, {
                     type: "text";
                     from: string;
                     id: string;
                     timestamp: string;
+                    text: {
+                        body: string;
+                    };
                     errors?: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1652,31 +1633,43 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     phone_number_id: string;
                 }>;
             }, "strip", z.ZodTypeAny, {
-                errors: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[];
                 contacts: {
                     wa_id: string;
-                    user_id: string;
                     profile: {
                         name: string;
                     };
                 }[];
+                errors: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
+                    };
+                }[];
                 messages: ({
+                    type: "audio";
+                    errors: {
+                        code: number;
+                        message: string;
+                        title: string;
+                        error_data: {
+                            details: string;
+                        };
+                    }[];
+                    from: string;
+                    id: string;
+                    timestamp: Date;
                     audio: {
                         id: string;
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
-                    type: "audio";
+                } | {
+                    type: "image";
                     errors: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1684,34 +1677,18 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     from: string;
                     id: string;
                     timestamp: Date;
-                } | {
-                    text: {
-                        body: string;
-                    };
-                    type: "text";
-                    errors: {
-                        code: number;
-                        title: string;
-                        message: string;
-                        error_data: {
-                            details: string;
-                        };
-                    }[];
-                    from: string;
-                    id: string;
-                    timestamp: Date;
-                } | {
                     image: {
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
                         sha256: string;
                         caption?: string | undefined;
                     };
-                    type: "image";
+                } | {
+                    type: "text";
                     errors: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1719,6 +1696,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     from: string;
                     id: string;
                     timestamp: Date;
+                    text: {
+                        body: string;
+                    };
                 })[];
                 metadata: {
                     display_phone_number: string;
@@ -1729,69 +1709,68 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     display_phone_number: string;
                     phone_number_id: string;
                 };
-                errors?: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[] | undefined;
                 contacts?: {
                     wa_id: string;
-                    user_id: string;
                     profile: {
                         name: string;
                     };
                 }[] | undefined;
-                messages?: ({
-                    audio: {
-                        id: string;
-                        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                errors?: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
                     };
+                }[] | undefined;
+                messages?: ({
                     type: "audio";
                     from: string;
                     id: string;
                     timestamp: string;
+                    audio: {
+                        id: string;
+                        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                    };
                     errors?: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
                     }[] | undefined;
                 } | {
-                    text: {
-                        body: string;
-                    };
-                    type: "text";
+                    type: "image";
                     from: string;
                     id: string;
                     timestamp: string;
-                    errors?: {
-                        code: number;
-                        title: string;
-                        message: string;
-                        error_data: {
-                            details: string;
-                        };
-                    }[] | undefined;
-                } | {
                     image: {
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
                         sha256: string;
                         caption?: string | undefined;
                     };
-                    type: "image";
+                    errors?: {
+                        code: number;
+                        message: string;
+                        title: string;
+                        error_data: {
+                            details: string;
+                        };
+                    }[] | undefined;
+                } | {
+                    type: "text";
                     from: string;
                     id: string;
                     timestamp: string;
+                    text: {
+                        body: string;
+                    };
                     errors?: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1801,31 +1780,43 @@ export declare const notificationPayloadSchema: z.ZodObject<{
             field: z.ZodLiteral<"messages">;
         }, "strip", z.ZodTypeAny, {
             value: {
-                errors: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[];
                 contacts: {
                     wa_id: string;
-                    user_id: string;
                     profile: {
                         name: string;
                     };
                 }[];
+                errors: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
+                    };
+                }[];
                 messages: ({
+                    type: "audio";
+                    errors: {
+                        code: number;
+                        message: string;
+                        title: string;
+                        error_data: {
+                            details: string;
+                        };
+                    }[];
+                    from: string;
+                    id: string;
+                    timestamp: Date;
                     audio: {
                         id: string;
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
-                    type: "audio";
+                } | {
+                    type: "image";
                     errors: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1833,34 +1824,18 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     from: string;
                     id: string;
                     timestamp: Date;
-                } | {
-                    text: {
-                        body: string;
-                    };
-                    type: "text";
-                    errors: {
-                        code: number;
-                        title: string;
-                        message: string;
-                        error_data: {
-                            details: string;
-                        };
-                    }[];
-                    from: string;
-                    id: string;
-                    timestamp: Date;
-                } | {
                     image: {
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
                         sha256: string;
                         caption?: string | undefined;
                     };
-                    type: "image";
+                } | {
+                    type: "text";
                     errors: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1868,6 +1843,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     from: string;
                     id: string;
                     timestamp: Date;
+                    text: {
+                        body: string;
+                    };
                 })[];
                 metadata: {
                     display_phone_number: string;
@@ -1881,69 +1859,68 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     display_phone_number: string;
                     phone_number_id: string;
                 };
-                errors?: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[] | undefined;
                 contacts?: {
                     wa_id: string;
-                    user_id: string;
                     profile: {
                         name: string;
                     };
                 }[] | undefined;
-                messages?: ({
-                    audio: {
-                        id: string;
-                        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                errors?: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
                     };
+                }[] | undefined;
+                messages?: ({
                     type: "audio";
                     from: string;
                     id: string;
                     timestamp: string;
+                    audio: {
+                        id: string;
+                        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                    };
                     errors?: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
                     }[] | undefined;
                 } | {
-                    text: {
-                        body: string;
-                    };
-                    type: "text";
+                    type: "image";
                     from: string;
                     id: string;
                     timestamp: string;
-                    errors?: {
-                        code: number;
-                        title: string;
-                        message: string;
-                        error_data: {
-                            details: string;
-                        };
-                    }[] | undefined;
-                } | {
                     image: {
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
                         sha256: string;
                         caption?: string | undefined;
                     };
-                    type: "image";
+                    errors?: {
+                        code: number;
+                        message: string;
+                        title: string;
+                        error_data: {
+                            details: string;
+                        };
+                    }[] | undefined;
+                } | {
+                    type: "text";
                     from: string;
                     id: string;
                     timestamp: string;
+                    text: {
+                        body: string;
+                    };
                     errors?: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1956,31 +1933,43 @@ export declare const notificationPayloadSchema: z.ZodObject<{
         id: string;
         changes: {
             value: {
-                errors: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[];
                 contacts: {
                     wa_id: string;
-                    user_id: string;
                     profile: {
                         name: string;
                     };
                 }[];
+                errors: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
+                    };
+                }[];
                 messages: ({
+                    type: "audio";
+                    errors: {
+                        code: number;
+                        message: string;
+                        title: string;
+                        error_data: {
+                            details: string;
+                        };
+                    }[];
+                    from: string;
+                    id: string;
+                    timestamp: Date;
                     audio: {
                         id: string;
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
-                    type: "audio";
+                } | {
+                    type: "image";
                     errors: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -1988,34 +1977,18 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     from: string;
                     id: string;
                     timestamp: Date;
-                } | {
-                    text: {
-                        body: string;
-                    };
-                    type: "text";
-                    errors: {
-                        code: number;
-                        title: string;
-                        message: string;
-                        error_data: {
-                            details: string;
-                        };
-                    }[];
-                    from: string;
-                    id: string;
-                    timestamp: Date;
-                } | {
                     image: {
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
                         sha256: string;
                         caption?: string | undefined;
                     };
-                    type: "image";
+                } | {
+                    type: "text";
                     errors: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -2023,6 +1996,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     from: string;
                     id: string;
                     timestamp: Date;
+                    text: {
+                        body: string;
+                    };
                 })[];
                 metadata: {
                     display_phone_number: string;
@@ -2039,69 +2015,68 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     display_phone_number: string;
                     phone_number_id: string;
                 };
-                errors?: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[] | undefined;
                 contacts?: {
                     wa_id: string;
-                    user_id: string;
                     profile: {
                         name: string;
                     };
                 }[] | undefined;
-                messages?: ({
-                    audio: {
-                        id: string;
-                        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                errors?: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
                     };
+                }[] | undefined;
+                messages?: ({
                     type: "audio";
                     from: string;
                     id: string;
                     timestamp: string;
+                    audio: {
+                        id: string;
+                        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                    };
                     errors?: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
                     }[] | undefined;
                 } | {
-                    text: {
-                        body: string;
-                    };
-                    type: "text";
+                    type: "image";
                     from: string;
                     id: string;
                     timestamp: string;
-                    errors?: {
-                        code: number;
-                        title: string;
-                        message: string;
-                        error_data: {
-                            details: string;
-                        };
-                    }[] | undefined;
-                } | {
                     image: {
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
                         sha256: string;
                         caption?: string | undefined;
                     };
-                    type: "image";
+                    errors?: {
+                        code: number;
+                        message: string;
+                        title: string;
+                        error_data: {
+                            details: string;
+                        };
+                    }[] | undefined;
+                } | {
+                    type: "text";
                     from: string;
                     id: string;
                     timestamp: string;
+                    text: {
+                        body: string;
+                    };
                     errors?: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -2117,31 +2092,43 @@ export declare const notificationPayloadSchema: z.ZodObject<{
         id: string;
         changes: {
             value: {
-                errors: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[];
                 contacts: {
                     wa_id: string;
-                    user_id: string;
                     profile: {
                         name: string;
                     };
                 }[];
+                errors: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
+                    };
+                }[];
                 messages: ({
+                    type: "audio";
+                    errors: {
+                        code: number;
+                        message: string;
+                        title: string;
+                        error_data: {
+                            details: string;
+                        };
+                    }[];
+                    from: string;
+                    id: string;
+                    timestamp: Date;
                     audio: {
                         id: string;
                         mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
                     };
-                    type: "audio";
+                } | {
+                    type: "image";
                     errors: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -2149,34 +2136,18 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     from: string;
                     id: string;
                     timestamp: Date;
-                } | {
-                    text: {
-                        body: string;
-                    };
-                    type: "text";
-                    errors: {
-                        code: number;
-                        title: string;
-                        message: string;
-                        error_data: {
-                            details: string;
-                        };
-                    }[];
-                    from: string;
-                    id: string;
-                    timestamp: Date;
-                } | {
                     image: {
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
                         sha256: string;
                         caption?: string | undefined;
                     };
-                    type: "image";
+                } | {
+                    type: "text";
                     errors: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
@@ -2184,6 +2155,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     from: string;
                     id: string;
                     timestamp: Date;
+                    text: {
+                        body: string;
+                    };
                 })[];
                 metadata: {
                     display_phone_number: string;
@@ -2203,69 +2177,68 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     display_phone_number: string;
                     phone_number_id: string;
                 };
-                errors?: {
-                    code: number;
-                    title: string;
-                    message: string;
-                    error_data: {
-                        details: string;
-                    };
-                }[] | undefined;
                 contacts?: {
                     wa_id: string;
-                    user_id: string;
                     profile: {
                         name: string;
                     };
                 }[] | undefined;
-                messages?: ({
-                    audio: {
-                        id: string;
-                        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                errors?: {
+                    code: number;
+                    message: string;
+                    title: string;
+                    error_data: {
+                        details: string;
                     };
+                }[] | undefined;
+                messages?: ({
                     type: "audio";
                     from: string;
                     id: string;
                     timestamp: string;
+                    audio: {
+                        id: string;
+                        mime_type: "audio/aac" | "audio/amr" | "audio/mpeg" | "audio/mp4" | "audio/ogg";
+                    };
                     errors?: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };
                     }[] | undefined;
                 } | {
-                    text: {
-                        body: string;
-                    };
-                    type: "text";
+                    type: "image";
                     from: string;
                     id: string;
                     timestamp: string;
-                    errors?: {
-                        code: number;
-                        title: string;
-                        message: string;
-                        error_data: {
-                            details: string;
-                        };
-                    }[] | undefined;
-                } | {
                     image: {
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
                         sha256: string;
                         caption?: string | undefined;
                     };
-                    type: "image";
+                    errors?: {
+                        code: number;
+                        message: string;
+                        title: string;
+                        error_data: {
+                            details: string;
+                        };
+                    }[] | undefined;
+                } | {
+                    type: "text";
                     from: string;
                     id: string;
                     timestamp: string;
+                    text: {
+                        body: string;
+                    };
                     errors?: {
                         code: number;
-                        title: string;
                         message: string;
+                        title: string;
                         error_data: {
                             details: string;
                         };

@@ -273,21 +273,21 @@ export declare const imageMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
         caption: z.ZodOptional<z.ZodString>;
         sha256: z.ZodString;
     }, "strip", z.ZodTypeAny, {
+        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
-        sha256: string;
         caption?: string | undefined;
     }, {
+        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
-        sha256: string;
         caption?: string | undefined;
     }>;
 }>, "strip", z.ZodTypeAny, {
     image: {
+        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
-        sha256: string;
         caption?: string | undefined;
     };
     type: "image";
@@ -304,9 +304,9 @@ export declare const imageMessageSchema: z.ZodObject<z.objectUtil.extendShape<{
     timestamp: Date;
 }, {
     image: {
+        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
-        sha256: string;
         caption?: string | undefined;
     };
     type: "image";
@@ -436,21 +436,21 @@ export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject
         caption: z.ZodOptional<z.ZodString>;
         sha256: z.ZodString;
     }, "strip", z.ZodTypeAny, {
+        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
-        sha256: string;
         caption?: string | undefined;
     }, {
+        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
-        sha256: string;
         caption?: string | undefined;
     }>;
 }>, "strip", z.ZodTypeAny, {
     image: {
+        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
-        sha256: string;
         caption?: string | undefined;
     };
     type: "image";
@@ -467,9 +467,9 @@ export declare const messageSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObject
     timestamp: Date;
 }, {
     image: {
+        sha256: string;
         id: string;
         mime_type: "image/jpeg" | "image/png";
-        sha256: string;
         caption?: string | undefined;
     };
     type: "image";

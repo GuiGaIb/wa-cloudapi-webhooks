@@ -216,21 +216,21 @@ export declare const valueSchema: z.ZodObject<{
             caption: z.ZodOptional<z.ZodString>;
             sha256: z.ZodString;
         }, "strip", z.ZodTypeAny, {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         }, {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         }>;
     }>, "strip", z.ZodTypeAny, {
         image: {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         };
         type: "image";
@@ -247,9 +247,9 @@ export declare const valueSchema: z.ZodObject<{
         timestamp: Date;
     }, {
         image: {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         };
         type: "image";
@@ -396,9 +396,9 @@ export declare const valueSchema: z.ZodObject<{
         timestamp: Date;
     } | {
         image: {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         };
         type: "image";
@@ -472,9 +472,9 @@ export declare const valueSchema: z.ZodObject<{
         }[] | undefined;
     } | {
         image: {
+            sha256: string;
             id: string;
             mime_type: "image/jpeg" | "image/png";
-            sha256: string;
             caption?: string | undefined;
         };
         type: "image";

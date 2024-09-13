@@ -161,21 +161,21 @@ export declare const changeSchema: z.ZodObject<{
                 caption: z.ZodOptional<z.ZodString>;
                 sha256: z.ZodString;
             }, "strip", z.ZodTypeAny, {
+                sha256: string;
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
-                sha256: string;
                 caption?: string | undefined;
             }, {
+                sha256: string;
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
-                sha256: string;
                 caption?: string | undefined;
             }>;
         }>, "strip", z.ZodTypeAny, {
             image: {
+                sha256: string;
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
-                sha256: string;
                 caption?: string | undefined;
             };
             type: "image";
@@ -192,9 +192,9 @@ export declare const changeSchema: z.ZodObject<{
             timestamp: Date;
         }, {
             image: {
+                sha256: string;
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
-                sha256: string;
                 caption?: string | undefined;
             };
             type: "image";
@@ -341,9 +341,9 @@ export declare const changeSchema: z.ZodObject<{
             timestamp: Date;
         } | {
             image: {
+                sha256: string;
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
-                sha256: string;
                 caption?: string | undefined;
             };
             type: "image";
@@ -417,9 +417,9 @@ export declare const changeSchema: z.ZodObject<{
             }[] | undefined;
         } | {
             image: {
+                sha256: string;
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
-                sha256: string;
                 caption?: string | undefined;
             };
             type: "image";
@@ -488,9 +488,9 @@ export declare const changeSchema: z.ZodObject<{
             timestamp: Date;
         } | {
             image: {
+                sha256: string;
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
-                sha256: string;
                 caption?: string | undefined;
             };
             type: "image";
@@ -567,9 +567,9 @@ export declare const changeSchema: z.ZodObject<{
             }[] | undefined;
         } | {
             image: {
+                sha256: string;
                 id: string;
                 mime_type: "image/jpeg" | "image/png";
-                sha256: string;
                 caption?: string | undefined;
             };
             type: "image";
@@ -752,21 +752,21 @@ export declare const entrySchema: z.ZodObject<{
                     caption: z.ZodOptional<z.ZodString>;
                     sha256: z.ZodString;
                 }, "strip", z.ZodTypeAny, {
+                    sha256: string;
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
-                    sha256: string;
                     caption?: string | undefined;
                 }, {
+                    sha256: string;
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
-                    sha256: string;
                     caption?: string | undefined;
                 }>;
             }>, "strip", z.ZodTypeAny, {
                 image: {
+                    sha256: string;
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
-                    sha256: string;
                     caption?: string | undefined;
                 };
                 type: "image";
@@ -783,9 +783,9 @@ export declare const entrySchema: z.ZodObject<{
                 timestamp: Date;
             }, {
                 image: {
+                    sha256: string;
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
-                    sha256: string;
                     caption?: string | undefined;
                 };
                 type: "image";
@@ -932,9 +932,9 @@ export declare const entrySchema: z.ZodObject<{
                 timestamp: Date;
             } | {
                 image: {
+                    sha256: string;
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
-                    sha256: string;
                     caption?: string | undefined;
                 };
                 type: "image";
@@ -1008,9 +1008,9 @@ export declare const entrySchema: z.ZodObject<{
                 }[] | undefined;
             } | {
                 image: {
+                    sha256: string;
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
-                    sha256: string;
                     caption?: string | undefined;
                 };
                 type: "image";
@@ -1079,9 +1079,9 @@ export declare const entrySchema: z.ZodObject<{
                 timestamp: Date;
             } | {
                 image: {
+                    sha256: string;
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
-                    sha256: string;
                     caption?: string | undefined;
                 };
                 type: "image";
@@ -1158,9 +1158,9 @@ export declare const entrySchema: z.ZodObject<{
                 }[] | undefined;
             } | {
                 image: {
+                    sha256: string;
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
-                    sha256: string;
                     caption?: string | undefined;
                 };
                 type: "image";
@@ -1232,9 +1232,9 @@ export declare const entrySchema: z.ZodObject<{
                 timestamp: Date;
             } | {
                 image: {
+                    sha256: string;
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
-                    sha256: string;
                     caption?: string | undefined;
                 };
                 type: "image";
@@ -1314,9 +1314,9 @@ export declare const entrySchema: z.ZodObject<{
                 }[] | undefined;
             } | {
                 image: {
+                    sha256: string;
                     id: string;
                     mime_type: "image/jpeg" | "image/png";
-                    sha256: string;
                     caption?: string | undefined;
                 };
                 type: "image";
@@ -1502,21 +1502,21 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                         caption: z.ZodOptional<z.ZodString>;
                         sha256: z.ZodString;
                     }, "strip", z.ZodTypeAny, {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     }, {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     }>;
                 }>, "strip", z.ZodTypeAny, {
                     image: {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     };
                     type: "image";
@@ -1533,9 +1533,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     timestamp: Date;
                 }, {
                     image: {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     };
                     type: "image";
@@ -1682,9 +1682,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     timestamp: Date;
                 } | {
                     image: {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     };
                     type: "image";
@@ -1758,9 +1758,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     }[] | undefined;
                 } | {
                     image: {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     };
                     type: "image";
@@ -1829,9 +1829,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     timestamp: Date;
                 } | {
                     image: {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     };
                     type: "image";
@@ -1908,9 +1908,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     }[] | undefined;
                 } | {
                     image: {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     };
                     type: "image";
@@ -1982,9 +1982,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     timestamp: Date;
                 } | {
                     image: {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     };
                     type: "image";
@@ -2064,9 +2064,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     }[] | undefined;
                 } | {
                     image: {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     };
                     type: "image";
@@ -2141,9 +2141,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     timestamp: Date;
                 } | {
                     image: {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     };
                     type: "image";
@@ -2226,9 +2226,9 @@ export declare const notificationPayloadSchema: z.ZodObject<{
                     }[] | undefined;
                 } | {
                     image: {
+                        sha256: string;
                         id: string;
                         mime_type: "image/jpeg" | "image/png";
-                        sha256: string;
                         caption?: string | undefined;
                     };
                     type: "image";
